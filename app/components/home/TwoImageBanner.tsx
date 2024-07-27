@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
 
 const TwoImageBanner = () => {
@@ -12,11 +12,11 @@ const TwoImageBanner = () => {
   ];
 
   return (
-    <div>
+    <Container maxW={"7xl"}>
       <Box display={"flex"} justifyContent={"center"}>
-        <Grid templateColumns="repeat(2, 1fr)">
+        <Grid templateColumns="repeat(2, 1fr)" gap={"1rem"}>
           {image.map((item, index) => (
-            <GridItem key={index} colSpan={1} mx={3}>
+            <GridItem key={index} colSpan={{ base: 2, md: 1 }}>
               <Box overflow="hidden">
                 <Image
                   src={item.url}
@@ -29,7 +29,7 @@ const TwoImageBanner = () => {
           ))}
         </Grid>
       </Box>
-    </div>
+    </Container>
   );
 };
 

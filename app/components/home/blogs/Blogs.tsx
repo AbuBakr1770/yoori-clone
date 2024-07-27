@@ -2,7 +2,7 @@
 import React from "react";
 import Slider from "react-slick";
 import BlogsCard from "./BlogsCard";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Container, Text } from "@chakra-ui/react";
 
 const Blogs = () => {
   const blogs = [
@@ -29,19 +29,41 @@ const Blogs = () => {
   ];
 
   var settings = {
-    // dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // xl
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // md
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 425, // sm
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
+
+  // Debug logging to check the settings being applied
+  console.log("Slider settings:", settings);
+
   return (
-    <div>
+    <Container maxW={"7xl"}>
       <Box>
         <Box
           borderBottom={"1px solid #0000001c"}
           py={"1rem"}
-          px={"4rem"}
+          // px={"4rem"}
           mb={"1rem"}
         >
           <Text fontSize={"3xl"}>Blogs</Text>
@@ -54,7 +76,7 @@ const Blogs = () => {
           </Slider>
         </Box>
       </Box>
-    </div>
+    </Container>
   );
 };
 

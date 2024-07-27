@@ -7,6 +7,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-yellow-theme: #febd0d;
+  --background-yellow-theme-bg: #febd0d29;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,4 +29,9 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.product-card:hover .hover-buttons {
+  opacity: 1;
+  /* right: 10px; */
 }

@@ -1,4 +1,12 @@
-import { Box, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Grid,
+  GridItem,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 import React from "react";
 import { CiCreditCard1 } from "react-icons/ci";
 import { FaAmbulance } from "react-icons/fa";
@@ -7,17 +15,18 @@ import { TfiReload } from "react-icons/tfi";
 
 const BannerList = () => {
   return (
-    <div>
+    <Container maxW={"7xl"} mb={"1rem"} display={{ base: "none", lg: "block" }}>
       <Box mt={"1rem"}>
-        <UnorderedList
-          display={"flex"}
+        <Grid
+          // display={"flex"}
           listStyleType={"none"}
           justifyContent={"space-between"}
           alignItems={"center"}
           border={"1px solid #0000001c"}
-          borderRadius={"25px"}
+          templateColumns="repeat(4, 1fr)"
+          // borderRadius={"25px"}
         >
-          <ListItem>
+          <GridItem colSpan={{ base: 2, lg: 1 }}>
             <Box
               display={"flex"}
               justifyContent={"center"}
@@ -31,8 +40,8 @@ const BannerList = () => {
                 <Text color={"#0000004f"}> For all orders over $100</Text>
               </Box>
             </Box>
-          </ListItem>
-          <ListItem>
+          </GridItem>
+          <GridItem colSpan={{ base: 2, lg: 1 }}>
             <Box
               display={"flex"}
               justifyContent={"center"}
@@ -46,8 +55,8 @@ const BannerList = () => {
                 <Text color={"#0000004f"}>Call or Email us 24X7</Text>
               </Box>
             </Box>
-          </ListItem>
-          <ListItem>
+          </GridItem>
+          <GridItem colSpan={{ base: 2, lg: 1 }}>
             <Box
               display={"flex"}
               justifyContent={"center"}
@@ -61,8 +70,8 @@ const BannerList = () => {
                 <Text color={"#0000004f"}>We ensure secure payment</Text>
               </Box>
             </Box>
-          </ListItem>
-          <ListItem>
+          </GridItem>
+          <GridItem colSpan={{ base: 2, lg: 1 }}>
             <Box
               display={"flex"}
               justifyContent={"center"}
@@ -76,10 +85,10 @@ const BannerList = () => {
                 <Text color={"#0000004f"}>Any back within 30 days</Text>
               </Box>
             </Box>
-          </ListItem>
-        </UnorderedList>
+          </GridItem>
+        </Grid>
       </Box>
-    </div>
+    </Container>
   );
 };
 

@@ -18,10 +18,12 @@ const ShopsCard = ({ item }) => {
         w="full"
         h="150px"
         objectFit="cover"
+        _hover={{ transform: "scale(1.1)" }}
+        transition="transform 3s ease"
       />
       <Box p="6">
         <Box display="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">
+          <Badge borderRadius="full" px="2" bg="var(--background-yellow-theme)">
             New
           </Badge>
           <Box
@@ -55,7 +57,12 @@ const ShopsCard = ({ item }) => {
           </Text>
         </HStack>
 
-        <Button mt="4" colorScheme="teal" variant="outline" w="full">
+        <Button
+          mt="4"
+          bg={"var(--background-yellow-theme)"}
+          variant="outline"
+          w="full"
+        >
           Visit Store
         </Button>
       </Box>

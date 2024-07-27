@@ -5,7 +5,13 @@ const BlogsCard = ({ blog }) => {
   return (
     <>
       <Box border="1px solid #00000017" mx={8}>
-        <Image src={blog.url} height={"auto"} width={"100%"} />
+        <Image
+          src={blog.url}
+          height={"auto"}
+          width={"100%"}
+          _hover={{ transform: "scale(1.1)" }}
+          transition="transform 1s ease"
+        />
 
         <Box p={4}>
           <Text fontSize="medium" fontWeight="bold" maxW="100%">

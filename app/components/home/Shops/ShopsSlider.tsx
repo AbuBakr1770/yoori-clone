@@ -1,5 +1,5 @@
 "use client";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Container, Text } from "@chakra-ui/react";
 import React from "react";
 import Slider from "react-slick";
 import ShopsCard from "./ShopsCard";
@@ -40,7 +40,7 @@ const ShopsSlider = () => {
     slidesToScroll: 1,
   };
   return (
-    <div>
+    <Container maxW={"7xl"}>
       <Box
         borderBottom={"1px solid #0000001c"}
         py={"1rem"}
@@ -55,7 +55,7 @@ const ShopsSlider = () => {
           <ShopsCard item={item} key={index} />
         ))}
       </Slider>
-    </div>
+    </Container>
   );
 };
 

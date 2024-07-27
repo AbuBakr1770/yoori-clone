@@ -1,15 +1,15 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Container } from "@chakra-ui/react";
 import React from "react";
 import ProductCategorySlider from "./ProductCategorySlider";
 
 const ProductCategories = ({ type }) => {
   return (
-    <div>
+    <Container maxW={"7xl"}>
       {type === "simple" ? (
         <Box
-          borderBottom={"1px solid #0000001c"}
+          borderBottom={"1px solid #febd0d29"}
           py={"1rem"}
-          px={"4rem"}
+          // px={"4rem"}
           mb={"2rem"}
         >
           <Text>Products Categories</Text>
@@ -23,7 +23,7 @@ const ProductCategories = ({ type }) => {
       )}
 
       <ProductCategorySlider />
-    </div>
+    </Container>
   );
 };
 

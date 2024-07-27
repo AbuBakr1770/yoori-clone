@@ -1,5 +1,5 @@
 "use client";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Container } from "@chakra-ui/react";
 import { title } from "process";
 import React from "react";
 import Slider from "react-slick";
@@ -38,14 +38,32 @@ const Brands = () => {
   ];
 
   var settings = {
-    // dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // xl
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 768, // md
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 430, // sm
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
   return (
-    <div>
+    <Container maxW={"7xl"} mb={"1rem"}>
       <Box>
         <Box
           borderBottom={"1px solid #0000001c"}
@@ -62,7 +80,7 @@ const Brands = () => {
           ))}
         </Slider>
       </Box>
-    </div>
+    </Container>
   );
 };
 

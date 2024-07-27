@@ -1,5 +1,5 @@
 "use client";
-import { Box, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 import { imagesArray, imagesArray2 } from "@/app/images/images";
 import Slider from "react-slick";
@@ -17,7 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <Box px={"4rem"} mt={"1rem"}>
+    <Container maxW={"7xl"}>
       <Grid templateColumns="repeat(4, 1fr)">
         <GridItem colSpan={1}>
           <Categories />
@@ -38,7 +38,13 @@ const HeroSection = () => {
             <Grid templateColumns="repeat(4, 1fr)" pr={"2.5rem"}>
               {imagesArray2.map((item, index) => (
                 <GridItem colSpan={1}>
-                  <Image key={index} src={item.url} alt="No Image found" />
+                  <Image
+                    _hover={{ transform: "scale(1.1)" }}
+                    transition="transform 0.3s ease"
+                    key={index}
+                    src={item.url}
+                    alt="No Image found"
+                  />
                 </GridItem>
               ))}
             </Grid>
@@ -47,7 +53,7 @@ const HeroSection = () => {
       </Grid>
 
       <BannerList />
-    </Box>
+    </Container>
   );
 };
 

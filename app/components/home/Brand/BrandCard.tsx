@@ -13,10 +13,19 @@ const BrandCard = ({ item }) => {
         alignItems={"center"}
       >
         <Box p={5} textAlign={"center"}>
-          <Image src={item.url} />
+          <Image
+            src={item.url}
+            alt="no brand "
+            _hover={{ transform: "scale(1.1)" }}
+            transition="transform 0.8s ease"
+          />
         </Box>
         <Box w={"-webkit-fill-available"}>
-          <Button bg={"#febd0d"} w={"100%"}>
+          <Button
+            bg={"var(--background-yellow-theme)"}
+            borderRadius={"none"}
+            w={"100%"}
+          >
             {item.name}
           </Button>
         </Box>

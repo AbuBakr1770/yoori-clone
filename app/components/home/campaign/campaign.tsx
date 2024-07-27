@@ -1,18 +1,18 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Container, Text } from "@chakra-ui/react";
 import React from "react";
 import CampaignCardSlider from "./campaignCardSlider";
 
 const Campaign = () => {
   return (
     <div>
-      <Box
+      <Container
+        maxW={"7xl"}
         borderBottom={"1px solid #0000001c"}
         py={"1rem"}
-        px={"4rem"}
         mb={"2rem"}
       >
         <Text>Campaign</Text>
-      </Box>
+      </Container>
       <CampaignCardSlider />
     </div>
   );

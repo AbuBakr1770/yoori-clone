@@ -27,10 +27,16 @@ import {
 const Footer = () => {
   return (
     <Box bg="gray.900" color="white" py={10}>
-      <Container maxW="container.xl">
+      <Container maxW="7xl">
         <Box bg="gray.900" color="white" mb={3} py={8} px={4}>
-          <Flex align="center" justify="space-between" maxW="6xl" mx="auto">
-            <Flex align="center">
+          <Flex
+            sx={{ flexDirection: { base: "column", md: "row" } }}
+            align="center"
+            justify="space-between"
+            maxW="6xl"
+            mx="auto"
+          >
+            <Box display={"flex"} alignItems="center">
               <Icon as={FaEnvelope} w={10} h={10} mr={4} />
               <Box>
                 <Text fontSize="lg" fontWeight="bold">
@@ -40,7 +46,7 @@ const Footer = () => {
                   Get All The Latest Information On Events, Sales And Offers.
                 </Text>
               </Box>
-            </Flex>
+            </Box>
             <Flex as="form">
               <Input
                 type="email"
@@ -54,6 +60,7 @@ const Footer = () => {
                 type="submit"
                 bg="gray.700"
                 color="white"
+                fontSize={"11px"}
                 _hover={{ bg: "gray.600" }}
               >
                 SUBSCRIBE

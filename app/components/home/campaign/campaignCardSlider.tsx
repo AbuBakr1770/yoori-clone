@@ -32,10 +32,33 @@ const CampaignCardSlider = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // xl
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // md
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      // {
+      //   breakpoint: 0, // default
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //   }
+      // }
+    ],
   };
   return (
     <div>
-      <Box px={"8rem"}>
+      <Container maxW={"7xl"} mb={"1rem"}>
         <Slider {...settings}>
           {campaignCardData.map((item, index) => (
             <Box
@@ -48,7 +71,12 @@ const CampaignCardSlider = () => {
               }}
             >
               <Box sx={{ width: "auto" }}>
-                <Image src={item.url} alt={item.offer} />
+                <Image
+                  src={item.url}
+                  alt={item.offer}
+                  _hover={{ transform: "scale(1.1)" }}
+                  transition="transform 0.3s ease"
+                />
               </Box>
               <Box
                 display={"flex"}
@@ -57,7 +85,7 @@ const CampaignCardSlider = () => {
                 justifyContent={"center"}
                 mt={"15px"}
               >
-                <Text
+                {/* <Text
                   display={"flex"}
                   gap={"8px"}
                   justifyContent={"center"}
@@ -69,7 +97,7 @@ const CampaignCardSlider = () => {
                   {" "}
                   <SlCalender />
                   {item.date}
-                </Text>
+                </Text> */}
                 <Text my={"8px"}>{item.offer}</Text>
                 <Text my={"7px"}>{item.name}</Text>
                 <Button>Get Discount</Button>
@@ -77,7 +105,7 @@ const CampaignCardSlider = () => {
             </Box>
           ))}
         </Slider>
-      </Box>
+      </Container>
     </div>
   );
 };

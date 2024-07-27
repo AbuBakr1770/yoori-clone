@@ -21,15 +21,15 @@ export default function Home() {
       <TwoImageBanner />
       <Products title={"Popular Products"} />
       <ProductCategories type={"simple"} />
-      <Box bg={"#f8f8f8"} p={"1rem"} pb={"2rem"} mt={"1.5rem"}>
+      <Box bg={"#f8f8f8"} p={"1rem"} pb={"2rem"} mt={"1.5rem"} mb={"1rem"}>
         <ProductCategories type={"of_the_month"} />
       </Box>
       <Products title={"Todays Deals"} />
       <TwoImageBanner />
       <Blogs />
       <Brands />
-      <ShopsSlider />
-      <TwoImageBanner />
+      {/* <ShopsSlider /> */}
+      {/* <TwoImageBanner /> */}
     </main>
   );
 }

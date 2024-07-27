@@ -1,8 +1,8 @@
 "use client";
-import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Text, Container } from "@chakra-ui/react";
 import React from "react";
 import { SlCalender } from "react-icons/sl";
-import ReactStars from "react-rating-stars-component";
+
 import Slider from "react-slick";
 
 const ProductCategorySlider = () => {
@@ -39,29 +39,59 @@ const ProductCategorySlider = () => {
   ];
 
   var settings = {
-    // dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // xl
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 768, // md
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 430, // sm
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 320, // sm
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
   return (
     <div>
-      <Box px={"8rem"}>
+      <Container maxW={"7xl"} mb={"1rem"}>
         <Slider {...settings}>
           {campaignCardData.map((item, index) => (
             <Box
               key={index}
-              bg={"#e7232333"}
+              bg={"var(--background-yellow-theme-bg)"}
               sx={{
                 border: "1px solid #00000040",
+                borderRadius: "20px",
                 width: "auto !important",
                 p: "10px",
                 mx: "5px",
               }}
             >
               <Box sx={{ width: "auto" }}>
-                <Image src={item.url} alt={item.name} />
+                <Image
+                  _hover={{ transform: "scale(1.1)" }}
+                  transition="transform 0.3s ease"
+                  src={item.url}
+                  alt={item.name}
+                />
               </Box>
               <Box
                 display={"flex"}
@@ -74,7 +104,7 @@ const ProductCategorySlider = () => {
             </Box>
           ))}
         </Slider>
-      </Box>
+      </Container>
     </div>
   );
 };
