@@ -19,10 +19,13 @@ const HeroSection = () => {
   return (
     <Container maxW={"7xl"}>
       <Grid templateColumns="repeat(4, 1fr)">
-        <GridItem colSpan={1}>
+        <GridItem
+          colSpan={{ base: 0, lg: 1 }}
+          display={{ base: "none", lg: "inline-block" }}
+        >
           <Categories />
         </GridItem>
-        <GridItem colSpan={3}>
+        <GridItem colSpan={{ base: 4, lg: 3 }}>
           <Box>
             <Slider {...settings}>
               {imagesArray.map((item, id) => (
@@ -34,10 +37,10 @@ const HeroSection = () => {
               ))}
             </Slider>
           </Box>
-          <Box>
-            <Grid templateColumns="repeat(4, 1fr)" pr={"2.5rem"}>
+          <Box mt={"1rem"}>
+            <Grid templateColumns="repeat(4, 1fr)">
               {imagesArray2.map((item, index) => (
-                <GridItem colSpan={1}>
+                <GridItem colSpan={{ base: 2, md: 1 }} m={1}>
                   <Image
                     _hover={{ transform: "scale(1.1)" }}
                     transition="transform 0.3s ease"

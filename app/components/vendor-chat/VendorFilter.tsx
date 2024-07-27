@@ -25,7 +25,7 @@ const VendorFilter = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box flex="2" textAlign="left" my={2}>
                 Price
               </Box>
               <AccordionIcon />
@@ -57,7 +57,7 @@ const VendorFilter = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box flex="2" textAlign="left" my={2}>
                 Brand
               </Box>
               <AccordionIcon />
@@ -75,7 +75,7 @@ const VendorFilter = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box flex="2" textAlign="left" my={2}>
                 test
               </Box>
               <AccordionIcon />
@@ -93,7 +93,7 @@ const VendorFilter = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box flex="2" textAlign="left" my={2}>
                 Color
               </Box>
               <AccordionIcon />
@@ -111,7 +111,7 @@ const VendorFilter = () => {
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box flex="2" textAlign="left" my={2}>
                 Rating
               </Box>
               <AccordionIcon />

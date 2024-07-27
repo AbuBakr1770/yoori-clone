@@ -12,15 +12,15 @@ export const imagesArray = [
 
 export const imagesArray2 = [
   {
-    url: "https://yoori.spagreen.net/public/images/20230831132912image_220x125-437.png",
+    url: "https://shopifellow.com/public/images/20231227035806image_220x125-488.png",
   },
   {
-    url: "https://yoori.spagreen.net/public/images/20230831132905image_220x125-53.png",
+    url: "https://shopifellow.com/public/images/20231227035655image_220x125-499.png",
   },
   {
-    url: "https://yoori.spagreen.net/public/images/20230831132858image_220x125-479.png",
+    url: "https://shopifellow.com/public/images/20231227035713image_220x125-470.png",
   },
   {
-    url: "https://yoori.spagreen.net/public/images/20230831132851image_220x125-40.png",
+    url: "https://shopifellow.com/public/images/20231225191850image_220x125-70.png",
   },
 ];

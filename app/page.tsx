@@ -18,7 +18,7 @@ export default function Home() {
       <HeroSection />
       <Campaign />
       <Products title={"Best Products"} />
-      <TwoImageBanner />
+      {/* <TwoImageBanner /> */}
       <Products title={"Popular Products"} />
       <ProductCategories type={"simple"} />
       <Box bg={"#f8f8f8"} p={"1rem"} pb={"2rem"} mt={"1.5rem"} mb={"1rem"}>
@@ -28,8 +28,8 @@ export default function Home() {
       <TwoImageBanner />
       <Blogs />
       <Brands />
-      {/* <ShopsSlider /> */}
-      {/* <TwoImageBanner /> */}
+      <ShopsSlider />
+      <TwoImageBanner />
     </main>
   );
 }

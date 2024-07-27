@@ -13,6 +13,7 @@ import { FaAngleDown, FaGooglePlay, FaApple } from "react-icons/fa";
 import { LuMapPin } from "react-icons/lu";
 
 const TopBanner = () => {
+  const btnStyles = { bg: "none", fontSize: "13px !important" };
   return (
     <div>
       <Box display={"flex"} justifyContent={"space-between"} bg={"#f5f5f5"}>
@@ -20,18 +21,20 @@ const TopBanner = () => {
           maxW={"7xl"}
           display={"flex"}
           justifyContent={"space-between"}
+          paddingY={"8px"}
         >
-          <Box>
+          <Box
+            display={{ base: "flex" }}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
             <Box
-              // display={"inline-block"}
               sx={{
                 display: { base: "none", lg: "inline-block" },
-                // Other styles can be added here
               }}
             >
-              <Box></Box>
               <Menu>
-                <MenuButton rightIcon={<FaAngleDown />} as={Button}>
+                <MenuButton sx={btnStyles} as={Text} mr={3}>
                   English
                 </MenuButton>
                 <MenuList sx={{ width: "50px !important" }}>
@@ -48,7 +51,7 @@ const TopBanner = () => {
               }}
             >
               <Menu>
-                <MenuButton rightIcon={<FaAngleDown />} as={Button}>
+                <MenuButton sx={btnStyles} mr={3} as={Text}>
                   Us Dollar
                 </MenuButton>
                 <MenuList>
@@ -58,27 +61,42 @@ const TopBanner = () => {
               </Menu>
             </Box>
 
-            <Button>
+            <Text
+              sx={btnStyles}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
               <FaGooglePlay className="mr-1 justify-center flex" />
               Google play
-            </Button>
-            <Button>
+            </Text>
+            <Text
+              sx={btnStyles}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              mx={2}
+            >
               <FaApple className="mr-1 justify-center flex" />
               App Store
-            </Button>
-            <Button>Become A Seller</Button>
+            </Text>
+            <Text sx={btnStyles} m={0}>
+              Be a Seller
+            </Text>
           </Box>
 
           <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
-            <Text>Call : 123456</Text>
+            <Text fontSize={"13px"} fontWeight={800}>
+              Call : 123456
+            </Text>
             <Box sx={{ display: { base: "none", lg: "flex" } }}>
-              <Button>
+              <Button sx={btnStyles}>
                 <LuMapPin />
                 Track
               </Button>
 
-              <Button>Compare</Button>
-              <Button>Blog</Button>
+              <Button sx={btnStyles}>Compare</Button>
+              <Button sx={btnStyles}>Blog</Button>
             </Box>
           </Box>
         </Container>

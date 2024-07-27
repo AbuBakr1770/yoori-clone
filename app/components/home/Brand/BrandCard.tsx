@@ -5,7 +5,7 @@ const BrandCard = ({ item }) => {
   return (
     <div>
       <Box
-        mx={4}
+        mr={4}
         border={"1px solid #0000001c"}
         display={"flex"}
         flexDirection={"column"}

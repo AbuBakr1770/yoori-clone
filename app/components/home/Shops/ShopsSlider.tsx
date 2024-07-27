@@ -33,11 +33,35 @@ const ShopsSlider = () => {
   ];
 
   var settings = {
-    // dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // xl
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // md
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 430, // sm
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 320, // sm
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <Container maxW={"7xl"}>

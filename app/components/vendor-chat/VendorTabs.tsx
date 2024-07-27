@@ -49,8 +49,14 @@ const VendorTabs = () => {
                     alignItems={"center"}
                     p={"2"}
                     gap={"10px"}
+                    my={5}
                   >
-                    <Text fontWeight={"700"}>Sort By</Text>
+                    <Text
+                      fontWeight={"700"}
+                      display={{ base: "none", md: "flex" }}
+                    >
+                      Sort By
+                    </Text>
                     <Menu>
                       <MenuButton as={Button} rightIcon={<FaAngleDown />}>
                         Filter by

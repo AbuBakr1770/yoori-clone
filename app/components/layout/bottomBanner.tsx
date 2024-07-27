@@ -40,7 +40,7 @@ const BottomBanner = () => {
         bg="var(--background-yellow-theme)"
         mt={"10px"}
         mb={"10px"}
-        px={"4rem"}
+        px={"0.5rem"}
         position={"sticky"}
         top={"0"}
       >

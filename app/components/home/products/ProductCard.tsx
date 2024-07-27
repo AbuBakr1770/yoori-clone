@@ -1,11 +1,17 @@
+"use client";
 import { Box, Image, Text, IconButton, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
 import ProductModal from "./ProductModal";
+import { Item } from "@/app/interfaces/products";
 
-const ProductCard = ({ item }) => {
+interface Props {
+  item: Item;
+}
+
+const ProductCard = ({ item }: Props) => {
   const { onOpen, isOpen, onClose } = useDisclosure();
   return (
     <Box
@@ -13,10 +19,17 @@ const ProductCard = ({ item }) => {
       p="10px"
       mx="5px"
       position="relative"
+      borderRadius={"15px"}
       width="auto"
       _hover={{ ".hover-buttons": { opacity: 1, transform: "translateX(0)" } }}
+      mb={2}
     >
-      <Box width="auto" position="relative">
+      <Box
+        width="auto"
+        position="relative"
+        display={"flex"}
+        justifyContent={"center"}
+      >
         <Image
           src={item.url}
           alt={item.name}

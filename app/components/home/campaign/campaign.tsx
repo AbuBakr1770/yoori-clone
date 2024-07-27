@@ -9,7 +9,7 @@ const Campaign = () => {
         maxW={"7xl"}
         borderBottom={"1px solid #0000001c"}
         py={"1rem"}
-        mb={"2rem"}
+        mb={"1rem"}
       >
         <Text>Campaign</Text>
       </Container>
