@@ -6,6 +6,7 @@ import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
 import ProductModal from "./ProductModal";
 import { Item } from "@/app/interfaces/products";
+import Link from "next/link";
 
 interface Props {
   item: Item;
@@ -30,12 +31,15 @@ const ProductCard = ({ item }: Props) => {
         display={"flex"}
         justifyContent={"center"}
       >
-        <Image
-          src={item.url}
-          alt={item.name}
-          _hover={{ transform: "scale(1.1)" }}
-          transition="transform 0.5s ease"
-        />
+        <Link href={"/products/detail"}>
+          <Image
+            src={item.url}
+            alt={item.name}
+            _hover={{ transform: "scale(1.1)" }}
+            transition="transform 0.5s ease"
+          />
+        </Link>
+
         <Box
           position="absolute"
           top="25%"

@@ -2,27 +2,16 @@
 import {
   Box,
   Container,
-  FormControl,
-  Input,
   ListItem,
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 import { CiShoppingCart } from "react-icons/ci";
-import {
-  FaBoxes,
-  FaList,
-  FaListUl,
-  FaRegHeart,
-  FaShoppingBag,
-} from "react-icons/fa";
+import { FaBoxes, FaList, FaListUl } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
-import {
-  IoHomeOutline,
-  IoPersonOutline,
-  IoPricetagsOutline,
-} from "react-icons/io5";
+import { IoHomeOutline, IoPricetagsOutline } from "react-icons/io5";
 
 const BottomBanner = () => {
   const iconStyles = {
@@ -65,12 +54,21 @@ const BottomBanner = () => {
 
           <Box>
             <UnorderedList display={"flex"} listStyleType={"none"} gap={"20px"}>
-              <ListItem>Home</ListItem>
-              <ListItem>Products</ListItem>
-              <ListItem>Stores</ListItem>
-              <ListItem>Brands</ListItem>
-              <ListItem>Categories</ListItem>
-              <ListItem>Pages</ListItem>
+              <ListItem>
+                <Link href={"/"}>Home</Link>
+              </ListItem>
+              <ListItem>
+                <Link href={"/products"}>Products</Link>
+              </ListItem>
+              <ListItem>
+                <Link href={"/sellers"}>Stores</Link>
+              </ListItem>
+              <ListItem>
+                <Link href={"/brands"}>Brands</Link>
+              </ListItem>
+              <ListItem>
+                <Link href={"/categories"}>Categories</Link>
+              </ListItem>
             </UnorderedList>
           </Box>
 

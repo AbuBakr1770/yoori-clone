@@ -1,4 +1,13 @@
-import { Box, Container, FormControl, Input, Text } from "@chakra-ui/react";
+"use client";
+import {
+  Box,
+  Container,
+  FormControl,
+  Input,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 import { FaRegHeart, FaShoppingBag } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
@@ -17,9 +26,16 @@ const MiddleBanner = () => {
         alignItems={"center"}
       >
         <Box textAlign={"center"}>
-          <Text fontSize={"2.5rem"} fontStyle={"italic"} fontWeight={800}>
+          <Link
+            href={"/"}
+            style={{
+              fontSize: "2.5rem",
+              fontStyle: "italic",
+              fontWeight: "800",
+            }}
+          >
             YOORI
-          </Text>
+          </Link>
         </Box>
         <Box w={"55%"}>
           <FormControl>
@@ -59,9 +75,16 @@ const MiddleBanner = () => {
       >
         <Box display={"flex"} justifyContent={"space-between"}>
           <Box textAlign={"center"}>
-            <Text fontSize={"1.7rem"} fontStyle={"italic"} fontWeight={800}>
+            <Link
+              href={"/"}
+              style={{
+                fontSize: "1.7rem",
+                fontStyle: "italic",
+                fontWeight: "800",
+              }}
+            >
               YOORI
-            </Text>
+            </Link>
           </Box>
           <Box
             display={"flex"}
@@ -75,12 +98,17 @@ const MiddleBanner = () => {
               <IoPersonOutline fontSize={"1rem"} className="cursor-pointer" />
             </Box>
             <Box>
-              <Text fontSize={"13px"} className="cursor-pointer">
-                Sign in
-              </Text>
-              <Text fontSize={"13px"} className="cursor-pointer">
-                Register
-              </Text>
+              <Link href={"login"}>
+                <Text fontSize={"13px"} className="cursor-pointer">
+                  Sign in
+                </Text>
+              </Link>
+
+              <Link href={"/register"}>
+                <Text fontSize={"13px"} className="cursor-pointer">
+                  Register
+                </Text>
+              </Link>
             </Box>
           </Box>
         </Box>
