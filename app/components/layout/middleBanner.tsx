@@ -19,7 +19,7 @@ const MiddleBanner = () => {
       <Container
         maxW={"7xl"}
         // px={"3.5rem"}
-        mt={"20px"}
+        // mt={"20px"}
         sx={{ display: { base: "none", lg: "flex" } }}
         display={"flex"}
         justifyContent={"space-between"}
@@ -48,7 +48,7 @@ const MiddleBanner = () => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Box display={"flex"} gap={"10px"}>
+          <Box display={"flex"} gap={"20px"}>
             <Link
               href={"/favourite"}
               style={{ fontSize: "13px", cursor: "pointer" }}
@@ -117,7 +117,7 @@ const MiddleBanner = () => {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Box display={"flex"} gap={"10px"}>
+            <Box display={"flex"} gap={"14px"}>
               <Link href={"/favourite"}>
                 <FaRegHeart fontSize={"1rem"} className="cursor-pointer" />
               </Link>

@@ -17,7 +17,7 @@ import SimpleSidebar from "./SideBar";
 const BottomBanner = () => {
   const iconStyles = {
     color: "white",
-    "font-size": "1.5rem",
+    "font-size": "1.8rem",
   };
 
   const bottomMobilebannerNavs = [
@@ -36,7 +36,7 @@ const BottomBanner = () => {
     { href: "/categories", label: "Categories" },
   ];
   return (
-    <div>
+    <>
       <Box
         display={{ base: "none", lg: "flex" }}
         justifyContent="space-between"
@@ -97,7 +97,7 @@ const BottomBanner = () => {
         justifyContent={"space-between"}
         sx={{ display: { base: "flex", lg: "none" } }}
         alignItems={"center"}
-        height={"2.5rem"}
+        height={"3.5rem"}
         bg="var(--background-yellow-theme)"
         // mt={"10px"}
         // mb={"10px"}
@@ -114,7 +114,7 @@ const BottomBanner = () => {
           </Link>
         ))}
       </Box>
-    </div>
+    </>
   );
 };
 
