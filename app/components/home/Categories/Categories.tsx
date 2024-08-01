@@ -61,7 +61,7 @@ const Categories = () => {
                   p={5}
                   zIndex={1}
                   boxShadow="md"
-                  width={"60vw"}
+                  width={"15vw"}
                 >
                   <Box borderBottom={"1px solid #0000001c"}>
                     <Text color={"black"} fontSize={"xl"} fontWeight={"light"}>
