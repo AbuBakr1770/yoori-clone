@@ -15,7 +15,7 @@ import { IoPersonOutline } from "react-icons/io5";
 const MiddleBanner = () => {
   return (
     <div>
-      {/* Laptop nav */}
+      {/* Laptop nav start */}
       <Container
         maxW={"7xl"}
         // px={"3.5rem"}
@@ -49,21 +49,46 @@ const MiddleBanner = () => {
           alignItems={"center"}
         >
           <Box display={"flex"} gap={"10px"}>
-            <FaRegHeart fontSize={"2rem"} className="cursor-pointer" />
-            <FaShoppingBag fontSize={"2rem"} className="cursor-pointer" />
-            <IoPersonOutline fontSize={"2rem"} className="cursor-pointer" />
+            <Link
+              href={"/favourite"}
+              style={{ fontSize: "13px", cursor: "pointer" }}
+            >
+              <FaRegHeart fontSize={"2rem"} className="cursor-pointer" />
+            </Link>
+
+            <Link
+              href={"/cart"}
+              style={{ fontSize: "13px", cursor: "pointer" }}
+            >
+              <FaShoppingBag fontSize={"2rem"} className="cursor-pointer" />
+            </Link>
+
+            <Link
+              href={"/profile"}
+              style={{ fontSize: "13px", cursor: "pointer" }}
+            >
+              <IoPersonOutline fontSize={"2rem"} className="cursor-pointer" />
+            </Link>
           </Box>
           <Box>
-            <Text fontSize={"13px"} className="cursor-pointer">
+            <Link
+              href={"/login"}
+              style={{ fontSize: "13px", cursor: "pointer" }}
+            >
               Sign in
-            </Text>
-            <Text fontSize={"13px"} className="cursor-pointer">
+            </Link>
+            <Link
+              href={"/register"}
+              style={{ fontSize: "13px", cursor: "pointer", display: "block" }}
+            >
               Register
-            </Text>
+            </Link>
           </Box>
         </Box>
       </Container>
-      {/* Mobile Nav */}
+      {/* Laptop nav end*/}
+
+      {/* Mobile Nav start*/}
       <Container
         maxW={"7xl"}
         sx={{ display: { base: "block", lg: "none" } }}
@@ -93,9 +118,15 @@ const MiddleBanner = () => {
             alignItems={"center"}
           >
             <Box display={"flex"} gap={"10px"}>
-              <FaRegHeart fontSize={"1rem"} className="cursor-pointer" />
-              <FaShoppingBag fontSize={"1rem"} className="cursor-pointer" />
-              <IoPersonOutline fontSize={"1rem"} className="cursor-pointer" />
+              <Link href={"/favourite"}>
+                <FaRegHeart fontSize={"1rem"} className="cursor-pointer" />
+              </Link>
+              <Link href={"/cart"}>
+                <FaShoppingBag fontSize={"1rem"} className="cursor-pointer" />
+              </Link>
+              <Link href={"/profile"}>
+                <IoPersonOutline fontSize={"1rem"} className="cursor-pointer" />
+              </Link>
             </Box>
             <Box>
               <Link href={"login"}>
@@ -119,6 +150,7 @@ const MiddleBanner = () => {
           </FormControl>
         </Box>
       </Container>
+      {/* Mobile Nav end*/}
     </div>
   );
 };

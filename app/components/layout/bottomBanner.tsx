@@ -12,75 +12,81 @@ import { CiShoppingCart } from "react-icons/ci";
 import { FaBoxes, FaList, FaListUl } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
 import { IoHomeOutline, IoPricetagsOutline } from "react-icons/io5";
+import SimpleSidebar from "./SideBar";
 
 const BottomBanner = () => {
   const iconStyles = {
     color: "white",
     "font-size": "1.5rem",
   };
+
+  const bottomMobilebannerNavs = [
+    { icon: <SimpleSidebar />, url: "" },
+    { icon: <FaBoxes style={iconStyles} />, url: "" },
+    { icon: <IoHomeOutline style={iconStyles} />, url: "/" },
+    { icon: <CiShoppingCart style={iconStyles} />, url: "/cart" },
+    { icon: <GoPerson style={iconStyles} />, url: "/profile" },
+  ];
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/products", label: "Products" },
+    { href: "/sellers", label: "Stores" },
+    { href: "/brands", label: "Brands" },
+    { href: "/categories", label: "Categories" },
+  ];
   return (
     <div>
       <Box
-        display={"flex"}
-        justifyContent={"space-between"}
-        sx={{ display: { base: "none", lg: "flex" } }}
-        alignItems={"center"}
-        height={"3rem"}
+        display={{ base: "none", lg: "flex" }}
+        justifyContent="space-between"
+        alignItems="center"
+        height="3rem"
         bg="var(--background-yellow-theme)"
-        mt={"10px"}
-        mb={"10px"}
-        px={"0.5rem"}
-        position={"sticky"}
-        top={"0"}
+        mt="10px"
+        mb="10px"
+        px="0.5rem"
+        position="sticky"
+        top="0"
       >
         <Container
-          maxW={"7xl"}
-          display={"flex"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          height={"3rem"}
+          maxW="7xl"
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          height="3rem"
         >
           <Box>
             <Text
-              fontWeight={"600"}
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              gap={"4px"}
+              fontWeight="600"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              gap="4px"
             >
-              <FaListUl /> All categories
+              {/* <FaListUl /> */}
+              <Link href={"/categories"}>All categories</Link>
             </Text>
           </Box>
 
           <Box>
-            <UnorderedList display={"flex"} listStyleType={"none"} gap={"20px"}>
-              <ListItem>
-                <Link href={"/"}>Home</Link>
-              </ListItem>
-              <ListItem>
-                <Link href={"/products"}>Products</Link>
-              </ListItem>
-              <ListItem>
-                <Link href={"/sellers"}>Stores</Link>
-              </ListItem>
-              <ListItem>
-                <Link href={"/brands"}>Brands</Link>
-              </ListItem>
-              <ListItem>
-                <Link href={"/categories"}>Categories</Link>
-              </ListItem>
+            <UnorderedList display="flex" listStyleType="none" gap="20px">
+              {links.map(({ href, label }) => (
+                <ListItem key={href}>
+                  <Link href={href}>{label}</Link>
+                </ListItem>
+              ))}
             </UnorderedList>
           </Box>
 
           <Box>
             <Text
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              gap={"4px"}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              gap="4px"
             >
-              <IoPricetagsOutline />
-              All Deals
+              <IoPricetagsOutline /> All Deals
             </Text>
           </Box>
         </Container>
@@ -96,17 +102,17 @@ const BottomBanner = () => {
         // mt={"10px"}
         // mb={"10px"}
         zIndex={1000}
-        px={"4rem"}
+        px={"1rem"}
         w={"100vw"}
         position={"fixed"}
         mt={"2rem"}
         bottom={"px"}
       >
-        <FaList style={iconStyles} />
-        <FaBoxes style={iconStyles} />
-        <IoHomeOutline style={iconStyles} />
-        <CiShoppingCart style={iconStyles} />
-        <GoPerson style={iconStyles} />
+        {bottomMobilebannerNavs.map((item, index) => (
+          <Link href={item.url} key={index}>
+            {item.icon}
+          </Link>
+        ))}
       </Box>
     </div>
   );

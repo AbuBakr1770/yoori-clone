@@ -116,11 +116,19 @@ const CartPage = () => {
                         </Td>
                         <Td>{item.price}</Td>
                         <Td display={"flex"} gap={2} alignItems={"center"}>
-                          <IconButton bg={"transparent"} icon={<FaPlus />} />
+                          <IconButton
+                            aria-label="transparent"
+                            bg={"transparent"}
+                            icon={<FaPlus />}
+                          />
                           3
-                          <IconButton bg={"transparent"} icon={<FaMinus />} />
+                          <IconButton
+                            aria-label="transparent"
+                            bg={"transparent"}
+                            icon={<FaMinus />}
+                          />
                         </Td>
-                        <Td>{item.price * 3}</Td>
+                        <Td>{item.price}</Td>
                       </Tr>
                     ))}
                   </Tbody>
